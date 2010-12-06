@@ -275,6 +275,13 @@
       # ...
     end
 
+!SLIDE
+# Some test stats #
+
+## 242 units - 0.5s ##
+## 51 integration - 1.15s ##
+## 14 acceptance - 0.6s ##
+
 !SLIDE bullets incremental smaller
 # Our Dependency Injection Framework #
 
