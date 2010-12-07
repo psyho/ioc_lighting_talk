@@ -232,6 +232,7 @@
     class SomeComponentClass
       # almost always only :depends_on is used
       include Component(:depends_on => [:foo, :bar, :baz],
+                        :name => :some_component,
                         :autowire => true,
                         :scope => :application,
                         :define_constructor => true,
