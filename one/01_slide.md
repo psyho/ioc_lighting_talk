@@ -244,6 +244,32 @@
       end
     end
 
+!SLIDE smaller
+# Constructor currying #
+
+    @@@Ruby
+    class ProcessFileJob
+      include Component(:depends_on => [:listings_dao],
+                        :provider => true)
+
+      def initialize(listings_dao, file_name)
+        self.listings_dao = listings_dao
+        self.file_name = file_name
+      end
+
+      def run
+        # ...
+      end
+    end
+
+    class JobRunner
+      include Component(:depends_on => [:process_file_job])
+
+      def process_file(name)
+        process_file_job.new(name).run
+      end
+    end
+
 !SLIDE small
 # Dependency Injection in Aggregatr contd. #
 
